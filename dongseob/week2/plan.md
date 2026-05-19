@@ -1,15 +1,47 @@
-<Architecture>
-1개의 프런트(값싼 도메인 살까 고민 중) + 2개의CRUD기반 백엔드(Blue/Green)
-AI Total 3
-- Code Rabbit = CI/CD 중 코드 리뷰 / 문제 확인 / 수정 방향 지시
-- Gemini or Codex + Vector = 전체적인 서버 내부에서의 모니터링 및 경고 알람
-- Qwen or Ollama = 에러 시 제한된 초동 조치
+# Architecture
 
-<주차 별 계획>
-Week 2 ㅣ대략적인 아키텍처 구상 및 주차 별 계획 설정
-Week 3 ㅣ깃랩 구성 / 프런트와 백엔드 프로젝트 생성 / 가비아 클라우드에 서버 띄우기
-Week 4 ㅣ전체적인 CI/CD 구축(CD는 Blue/Green으로 구축 예정) / 프런트 백엔드 간 API 연동 및 도메인 연결 / 모니터링 구축
-Week 5 ㅣCode Rabbit 추가 / 모니터링 부분에 AI 추가
-Week 6 ㅣ에러 시 제한된 초동 조치 부분에 AI 추가
-Week 7 ㅣ전체적인 QA 및 시간 남을 시, k8s 추가?
+## 구성
+- 프런트엔드 1개  
+  - (선택) 값싼 도메인 구매/연결 고민 중
+- CRUD 기반 백엔드 2개 (Blue/Green)
 
+## AI 구성 (총 3개)
+1) **Code Rabbit**
+   - CI/CD 과정에서 코드 리뷰
+   - 문제점 확인 및 수정 방향 가이드
+
+2) **Gemini 또는 Codex + Vector**
+   - 서버 내부 모니터링/로그 기반 경고 및 알람
+
+3) **Qwen 또는 Ollama**
+   - 에러 발생 시 제한된 범위의 초동 조치(가벼운 자동 대응)
+
+---
+
+# 주차 별 계획
+
+## Week 2
+- 대략적인 아키텍처 구상
+- 주차 별 계획(마일스톤) 확정
+
+## Week 3
+- GitLab 구성
+- 프런트/백엔드 프로젝트 생성
+- 가비아 클라우드에 서버 인스턴스 구축
+
+## Week 4
+- CI/CD 전체 구축  
+  - CD는 Blue/Green 방식으로 구성 예정
+- 프런트-백엔드 API 연동 및 도메인 연결
+- 모니터링 구축
+
+## Week 5
+- Code Rabbit 도입/연동
+- 모니터링 영역에 AI(경고/알람) 추가
+
+## Week 6
+- 에러 시 제한된 초동 조치 AI 추가(Qwen 또는 Ollama)
+
+## Week 7
+- 전체 QA 진행
+- 시간 남을 시 Kubernetes(k8s) 추가 검토
