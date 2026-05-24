@@ -13,7 +13,6 @@
 | 항목 | 내용 |
 | --- | --- |
 | 현재 단계 | Week 3 구현 결과 정리 완료 |
-| 구현 기준 프로젝트 | `/Users/luke/Projects/25-26-Web-Log-Monitoring-Study` |
 | 주요 구현 범위 | Node.js + TypeScript 실행 기반, Elasticsearch 클라이언트, 주기 실행 구조, 탐지/알림 잡 파일 |
 | 상세 설계 문서 | [Week 2 README](./week2/README.md) |
 | 구현 결과 문서 | [Week 3 README](./week3/README.md) |
