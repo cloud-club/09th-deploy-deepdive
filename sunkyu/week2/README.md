@@ -315,31 +315,6 @@ flowchart LR
 | SSH | 특정 IP만 허용 |
 | 로그 | Reverse Proxy 기준으로 수집 |
 
-## 5. Blue/Green 배포 아키텍처
-
-```mermaid
-flowchart LR
-    Dev["Developer"] --> GitLab["GitLab Repository"]
-    GitLab --> CI["GitLab CI<br/>Build / Test / Lint"]
-    CI --> Review["Code Rabbit<br/>AI Code Review"]
-    CI --> Sonar["SonarQube<br/>Static Analysis"]
-
-    CI --> Deploy{"배포 대상 선택"}
-
-    Deploy --> Blue["Backend Blue"]
-    Deploy --> Green["Backend Green"]
-
-    LB["Reverse Proxy / Load Balancer"] --> Active["Active Backend"]
-    Active --> Blue
-    Active --> Green
-
-    Blue --> DB[("Service DB")]
-    Green --> DB
-
-    Blue --> ES["Elasticsearch"]
-    Green --> ES
-```
-
 # 주차별 개발 계획
 
 ## Week 2. 아키텍처 및 마일스톤 확정
