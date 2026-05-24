@@ -12,7 +12,7 @@
 - 중복 명언 방지 로직
 - Docker 컨테이너화
 - ECR 이미지 push
-- 이후 ECS Fargate, EventBridge Scheduler, CloudWatch, GitHub Actions로 확장 예정
+- 이후 ECS EC2유형, EventBridge Scheduler, CloudWatch, GitHub Actions로 확장 예정
 
 ## 2. 사용 기술 스택
 
@@ -25,7 +25,7 @@
 | Database | Amazon DynamoDB |
 | Container | Docker |
 | Image Registry | Amazon ECR |
-| 예정 배포 환경 | Amazon ECS Fargate |
+| 예정 배포 환경 | Amazon ECS EC2유형 |
 | 예정 스케줄러 | EventBridge Scheduler |
 | 예정 로그 관리 | CloudWatch Logs |
 | 예정 CI/CD | GitHub Actions |
@@ -270,13 +270,13 @@ pytest
 
 ## 9. 앞으로 할 일
 
-### 9.1 ECS Fargate 배포
+### 9.1 ECS EC2유형 배포
 
 - ECS Cluster 생성
 - Task Definition 작성
 - 컨테이너 이미지로 ECR 이미지 사용
 - Task Role에 Bedrock/DynamoDB 권한 부여
-- FastAPI 앱을 Fargate Service로 실행
+- FastAPI 앱을 EC2유형 Service로 실행
 - 보안 그룹과 네트워크 설정
 - 필요 시 ALB 연결
 
@@ -318,5 +318,5 @@ SES는 CI/CD와 배포 흐름이 정리된 뒤 고도화 기능으로 추가한�
 
 ---
 ## Week4 할 일
-LangGraph로 Agent가 해야 할 여러 단계를 관리
-
+- LangGraph 로 Agent가 해야 할 여러 단계를 관리
+- LangChain 적용시켜보기
