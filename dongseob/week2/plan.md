@@ -44,4 +44,4 @@
 
 ## Week 7
 - 전체 QA 진행
-- 시간 남을 시 Kubernetes(k8s) 추가 검토
+- 시간 남을 시 Kubernetes(k8s) or Terraform 추가 검토
