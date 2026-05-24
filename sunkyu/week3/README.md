@@ -1,12 +1,6 @@
 # Week 3 구현 결과
 
-## 1. 구현 기준 프로젝트
-
-```text
-/Users/luke/Projects/25-26-Web-Log-Monitoring-Study
-```
-
-## 2. 프로젝트 구성
+## 1. 프로젝트 구성
 
 ```text
 src/
@@ -23,9 +17,9 @@ src/
     └── elastic-user.client.ts
 ```
 
-## 3. 구현 결과
+## 2. 구현 결과
 
-### 3.1 Node.js + TypeScript 실행 환경 구성
+### 2.1 Node.js + TypeScript 실행 환경 구성
 
 Node.js + TypeScript 기반 프로젝트를 구성했다.
 
@@ -37,7 +31,7 @@ npm run dev
 
 실행 시 `tsx src/app.ts`를 통해 TypeScript 진입 파일을 실행한다.
 
-### 3.2 환경 변수 로딩 구현
+### 2.2 환경 변수 로딩 구현
 
 `src/app.ts`에서 `dotenv`를 사용해 `.env` 파일을 로딩하도록 구현했다.
 
@@ -53,7 +47,7 @@ dotenv.config();
 | `ELASTIC_USERNAME` | Elasticsearch Basic Auth 사용자명 |
 | `ELASTIC_PASSWORD` | Elasticsearch Basic Auth 비밀번호 |
 
-### 3.3 주기 실행 구조 구현
+### 2.3 주기 실행 구조 구현
 
 `src/app.ts`에서 `setInterval`을 사용해 잡을 반복 실행하는 구조를 구현했다.
 
@@ -75,7 +69,7 @@ export const config = {
 };
 ```
 
-### 3.4 Elasticsearch 로그 조회 클라이언트 구현
+### 2.4 Elasticsearch 로그 조회 클라이언트 구현
 
 `src/utils/elastic-query.client.ts`에 Elasticsearch ES|QL API 호출 클라이언트를 구현했다.
 
@@ -97,7 +91,7 @@ FROM iis-*
 | SORT @timestamp DESC
 ```
 
-### 3.5 Elasticsearch 사용자 조회 클라이언트 구현
+### 2.5 Elasticsearch 사용자 조회 클라이언트 구현
 
 `src/utils/elastic-user.client.ts`에 Elasticsearch 사용자 조회 클라이언트를 구현했다.
 
@@ -121,7 +115,7 @@ FROM iis-*
 | `src/jobs/server-error.job/job.ts` | 5xx 서버 에러 탐지 잡 |
 | `src/jobs/mail-notification.job/job.ts` | 이메일 알림 잡 |
 
-### 3.7 에러 로그 형식 구현
+### 2.7 에러 로그 형식 구현
 
 Elasticsearch API 호출 실패 시 다음 형식으로 에러 로그를 출력하도록 구현했다.
 
